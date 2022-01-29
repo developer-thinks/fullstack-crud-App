@@ -1,0 +1,35 @@
+#List of batabases in my local machine :
+mysql> show databases;
+
+#use the database of the current project :
+mysql> use cruddb;
+Database changed
+
+#show tables in the selected db :
+mysql> show tables;
++------------------+
+| Tables_in_cruddb |
++------------------+
+| moviereviews     |
++------------------+
+1 row in set (0.02 sec)
+
+mysql> select * from moviereviews;
++----+-------------+------------------+
+| id | movieName   | movieReview      |
++----+-------------+------------------+
+|  1 | Avengers    | Words no 1 movie |
+|  9 | KGF         | best             |
+| 11 | Kotigobba 3 | Nice movie       |
+| 12 | M S Dhoni   | best story       |
++----+-------------+------------------+
+4 rows in set (0.00 sec)
+
+
+Table structure :
+
+create table moviereviews(
+    id int primary key not null auto_increment,
+    movieName varchar(255) not null,
+    movieReview Text(500) not null
+)
